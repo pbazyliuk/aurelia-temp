@@ -1,3 +1,10 @@
 <template>
 	Home Component
+	<form action="">
+		<input type="text" placeholder="Search">
+	</form>
+	<ul>
+		<li repeat.for="user of users">${user.login}</li>
+	</ul>
+	<div>${users[0].login}</div>
 </template>
