@@ -1,3 +1,10 @@
 <template>
-  <h1>${message}</h1>
+	<ul class="col-md-12">
+		<li repeat.for="route of router.navigation">
+			<a href.bind="route.href" >${route.title}</a>
+		</li>
+	</ul>
+	<div class="container">
+		<router-view></router-view>
+	</div>		
 </template>
