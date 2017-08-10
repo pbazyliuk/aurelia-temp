@@ -7,6 +7,7 @@ export class home {
 	constructor(getAllUsersService) {
 		this.users = [];
 		this.getAllUsersService = getAllUsersService
+		console.log('home contan', this.getAllUsersService);
 	}
 
 	activate(params, router) {

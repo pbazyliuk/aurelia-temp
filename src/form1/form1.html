@@ -1,10 +1,11 @@
 <template>
-	<form action="">
-		<div>
+	Form1 component
+	<form>
+		<div class="form-group">
 			<label for="email">Email</label>
-			<input type="text" />
+			<input type="email" value.bind="job.email & validate" />
 		</div>
-		<div>
+		<div class="form-group">
 			<label for="password">Password</label>
 			<input type="password" />
 		</div>
@@ -13,7 +14,7 @@
 			<input type="checkbox" />
 			<input type="checkbox" />
 		</div>
-		<div>
+		<div class="form-group">
 			<select name="selectOption" id="">
 				<option value="1">fisrt</option>
 				<option value="2">second</option>
@@ -21,5 +22,13 @@
 			</select>
 		</div>
 		<div><button type="submit">Submit</button></div>
+		<ul if.bind="controller.errors">
+			<li repeat.for="error of controller.errors" style="color:red;">
+				${error.message}
+			</li>
+		</ul>
+
+		<div>Notification received: ${notification}</div>
+
 	</form>
 </template>
